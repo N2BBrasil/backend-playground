@@ -1,0 +1,6 @@
+- name: log_scheduled_appointments
+  webhook: http://host.docker.internal:3000/webhooks/scheduled-appointments-cron
+  schedule: "*/5 * * * *"
+  payload: {}
+  include_in_metadata: true
+  comment: "Logs all appointments with status 'scheduled' every 5 minutes"

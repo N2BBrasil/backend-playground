@@ -1,0 +1,14 @@
+type Mutation {
+    bookAppointment(
+    patient_id: uuid!
+    schedule_to: timestamptz!
+    ): AppointmentOutput
+}
+
+type AppointmentOutput {
+    id: uuid!
+    patient_id: uuid!
+    schedule_to: timestamptz!
+    status: String!
+    created_at: timestamptz!
+}

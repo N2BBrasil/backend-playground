@@ -1,0 +1,31 @@
+actions:
+- name: bookAppointment
+  definition:
+    kind: synchronous
+    handler: http://host.docker.internal:3000/booking/appointments
+    forward_client_headers: true
+    type: mutation
+    arguments:
+    - name: patient_id
+      type: uuid!
+    - name: schedule_to
+      type: timestamptz!
+    output_type: AppointmentOutput
+  comment: Books an appointment and schedules a reminder event
+custom_types:
+  enums: []
+  input_objects: []
+  objects:
+  - name: AppointmentOutput
+    fields:
+    - name: id
+      type: uuid!
+    - name: patient_id
+      type: uuid!
+    - name: schedule_to
+      type: timestamptz!
+    - name: status
+      type: String!
+    - name: created_at
+      type: timestamptz!
+  scalars: []
