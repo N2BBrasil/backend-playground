@@ -1,0 +1,41 @@
+{
+  "typescript.format.enable": false,
+  "javascript.format.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.tslint": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "jest.autoRun": {},
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "host": "http://localhost:3000"
+    },
+    "local": {
+      "host": "{{$shared host}}",
+      "token": "{{$shared token}}",
+      "totemToken": "{{$shared totemToken}}",
+      "thirdPartyToken": "{{$shared thirdPartyToken}}"
+    }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

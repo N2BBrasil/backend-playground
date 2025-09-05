@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "humao.rest-client",
+    "eamodio.gitlens",
+    "firsttris.vscode-jest-runner",
+    "yoavbls.pretty-ts-errors",
+    "bierner.markdown-mermaid"
+  ]
+}
