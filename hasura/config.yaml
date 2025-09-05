@@ -12,3 +12,9 @@ api_paths:
 metadata_directory: metadata
 migrations_directory: migrations
 seeds_directory: seeds
+actions:
+  kind: synchronous
+  handler_webhook_baseurl: http://localhost:3000
+  codegen:
+    framework: ""
+    output_dir: ""

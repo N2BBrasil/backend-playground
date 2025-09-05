@@ -1,0 +1,18 @@
+table:
+  schema: public
+  name: appointment
+object_relationships:
+- name: patient
+  using:
+    foreign_key_constraint_on: patient_id
+event_triggers:
+- name: appointment_created
+  definition:
+    enable_manual: false
+    insert:
+      columns: "*"
+  webhook: http://host.docker.internal:3000/webhooks/appointment-created
+  retry_conf:
+    num_retries: 3
+    interval_sec: 10
+    timeout_sec: 60

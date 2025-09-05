@@ -20,17 +20,24 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "hasura:down": "docker compose -p backend-playground --project-directory ./hasura down",
     "hasura:up": "docker compose -p backend-playground --project-directory ./hasura up -d --remove-orphans",
-    "hasura:console": "hasura --project hasura --skip-update-check console --endpoint http://localhost:8080"
+    "hasura:console": "hasura --project hasura --skip-update-check console --endpoint http://localhost:8080",
+    "hasura:migrate": "hasura --project hasura --skip-update-check migrate apply --endpoint http://localhost:8080",
+    "hasura:metadata": "hasura --project hasura --skip-update-check metadata apply --endpoint http://localhost:8080"
   },
   "dependencies": {
     "@nestjs/axios": "^4.0.1",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
+    "@nestjs/graphql": "^13.1.0",
     "@nestjs/platform-express": "^11.0.1",
     "axios": "^1.11.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "graphql": "^16.11.0",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -42,6 +49,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^22.10.7",
     "@types/supertest": "^6.0.2",
+    "@types/uuid": "^10.0.0",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",
